@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import UserForm from "./components/UserForm";
+import { Container } from "semantic-ui-react";
 
 class App extends Component {
   render() {
-    return <UserForm />;
+    return (
+      <Container>
+        <UserForm />
+      </Container>
+    );
   }
 }
 

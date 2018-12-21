@@ -4,6 +4,7 @@ import UserPersonal from "./UserPersonal";
 import Confirm from "./Confirm";
 import Success from "./Success";
 import "semantic-ui-css/semantic.min.css";
+import { Transition } from "semantic-ui-react";
 
 class UserForm extends Component {
   state = {
@@ -16,17 +17,15 @@ class UserForm extends Component {
     bio: ""
   };
 
-  nextStep = e => {
+  nextStep = () => {
     const { step } = this.state;
-    e.preventDefault();
     this.setState({
       step: step + 1
     });
   };
 
-  prevStep = e => {
+  prevStep = () => {
     const { step } = this.state;
-    e.preventDefault();
     this.setState({
       step: step - 1
     });
